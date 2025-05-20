@@ -18,10 +18,10 @@ mcp = FastMCP("HiveServer")
 def get_hive_connection():
     """获取 Hive 连接"""
     try:
-        host = os.getenv("HIVE_HOST", "10.50.71.14")
-        port = int(os.getenv("HIVE_PORT", "10000"))
-        username = os.getenv("HIVE_USERNAME", "qiannan")
-        password = os.getenv("HIVE_PASSWORD", "nan-qian@dd-lab")
+        host = os.getenv("HIVE_HOST", "")
+        port = int(os.getenv("HIVE_PORT", ""))
+        username = os.getenv("HIVE_USERNAME", "")
+        password = os.getenv("HIVE_PASSWORD", "")
         
         logger.info(f"正在连接到 Hive 服务器: {host}:{port}")
         
