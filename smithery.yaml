@@ -1,6 +1,6 @@
 version: 1
 start:
-  command: ["python", "hive_server.py"]
+  command: ["python", "-m", "mcp_server_hive.hive_server"]
   env:
     - name: PYTHONPATH
       value: .

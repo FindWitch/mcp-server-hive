@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y \
 
 COPY pyproject.toml .
 COPY README.md .
-COPY hive_server.py .
+COPY src/ src/
 
 RUN pip install --no-cache-dir -e .
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["python", "hive_server.py"]
+CMD ["python", "-m", "mcp_server_hive.hive_server"]
