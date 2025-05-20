@@ -1,0 +1,21 @@
+version: 1
+start:
+  command: ["python", "hive_server.py"]
+  env:
+    - name: PYTHONPATH
+      value: .
+    - name: PYTHONUNBUFFERED
+      value: "1"
+    - name: HIVE_HOST
+      value: ""  # 从环境变量或配置中获取
+    - name: HIVE_PORT
+      value: ""  # 从环境变量或配置中获取
+    - name: HIVE_USERNAME
+      value: ""  # 从环境变量或配置中获取
+    - name: HIVE_PASSWORD
+      value: ""  # 从环境变量或配置中获取
+  volumes:
+    - .:/app
+  build:
+    context: .
+    dockerfile: Dockerfile
